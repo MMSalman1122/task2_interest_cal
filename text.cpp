@@ -7,7 +7,7 @@ int main()
     float interest_rate,years,savings,principle_amount,interest=0;
 
 
-    cout<<"Enter rate of interest: ";
+    cout<<"Enter rate of interest in decimal: ";
     cin>>interest_rate;
     cout<<"Enter number of years: ";
     cin>>years;

@@ -4,12 +4,12 @@ float savings_cal(float,float);
 int main()
 {
 
-    float interest_rate,years,principle_amount,interest=0;
+    float interest_rate,years,savings,principle_amount,interest=0;
 
 
     cout<<"Enter rate of interest: ";
     cin>>interest_rate;
-    cout<<"Enter number of years: "<<endl;
+    cout<<"Enter number of years: ";
     cin>>years;
 
 
@@ -17,11 +17,12 @@ int main()
     {
         cout << "Enter principle amount: ";
         cin>>principle_amount;
-        principle_amount=interest+principle_amount;//updated amount.
-        interest=savings_cal(principle_amount,interest_rate);
-        cout<<interest<<endl;
+        savings=savings+principle_amount;
+        principle_amount=principle_amount+interest;//updated amount.
+        interest=interest+savings_cal(principle_amount,interest_rate);
+        cout<<"Total interest:"<<interest<<endl;
     }
-    cout<<principle_amount+interest;
+    cout<<"Total amount after n years:"<<savings+interest;
 
     return 0;
 }
